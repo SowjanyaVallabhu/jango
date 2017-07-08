@@ -1,0 +1,21 @@
+<html>
+    <head> <title>first</title>
+    </head>
+    <body>
+        <h1><center>FIRST</center></h1>
+        <table border = "5">
+        {% for p in productDetails %}
+            <tr> <td> {{p.name}}</td></tr>
+            <tr> <td> {{p.description}}</td></tr>
+            <tr> <td> {{p.unitcost}}</td></tr>
+            <tr> <td> {{p.fund_or_sell}}</td></tr>
+            <tr> <td> {{p.url}}</td></tr>
+            {% load static %}
+            <tr><td> <img src="{% get_media_prefix %}{{p.image}}">
+            </tr></td>
+         {% endfor %}
+             {% load static %}
+        </table>
+             <img src="{% get_media_prefix %}image.png">
+    </body>
+</html>
